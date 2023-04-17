@@ -1,0 +1,635 @@
+2023-04-16 16:52:55,878 INFO: |===>The used PyTorch version is 1.12.0+cu102
+2023-04-16 16:52:55,878 INFO: |===>Creating data loader for cifar100
+2023-04-16 16:52:59,215 INFO: CIFARResNet(
+  (features): Sequential(
+    (0): ConvBlock(
+      (conv): (Quant_Conv2d() weight_bit=4, full_precision_flag=False)
+      (bn): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (activ): Sequential(
+        (0): ReLU(inplace=True)
+        (1): QuantAct(activation_bit=4, full_precision_flag=False, running_stat=True, Act_min: 0.00, Act_max: 0.00)
+      )
+    )
+    (1): Sequential(
+      (0): ResUnit(
+        (body): ResBlock(
+          (conv1): ConvBlock(
+            (conv): (Quant_Conv2d() weight_bit=4, full_precision_flag=False)
+            (bn): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (activ): Sequential(
+              (0): ReLU(inplace=True)
+              (1): QuantAct(activation_bit=4, full_precision_flag=False, running_stat=True, Act_min: 0.00, Act_max: 0.00)
+            )
+          )
+          (conv2): ConvBlock(
+            (conv): (Quant_Conv2d() weight_bit=4, full_precision_flag=False)
+            (bn): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (activ): Sequential(
+          (0): ReLU(inplace=True)
+          (1): QuantAct(activation_bit=4, full_precision_flag=False, running_stat=True, Act_min: 0.00, Act_max: 0.00)
+        )
+      )
+      (1): ResUnit(
+        (body): ResBlock(
+          (conv1): ConvBlock(
+            (conv): (Quant_Conv2d() weight_bit=4, full_precision_flag=False)
+            (bn): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (activ): Sequential(
+              (0): ReLU(inplace=True)
+              (1): QuantAct(activation_bit=4, full_precision_flag=False, running_stat=True, Act_min: 0.00, Act_max: 0.00)
+            )
+          )
+          (conv2): ConvBlock(
+            (conv): (Quant_Conv2d() weight_bit=4, full_precision_flag=False)
+            (bn): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (activ): Sequential(
+          (0): ReLU(inplace=True)
+          (1): QuantAct(activation_bit=4, full_precision_flag=False, running_stat=True, Act_min: 0.00, Act_max: 0.00)
+        )
+      )
+      (2): ResUnit(
+        (body): ResBlock(
+          (conv1): ConvBlock(
+            (conv): (Quant_Conv2d() weight_bit=4, full_precision_flag=False)
+            (bn): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (activ): Sequential(
+              (0): ReLU(inplace=True)
+              (1): QuantAct(activation_bit=4, full_precision_flag=False, running_stat=True, Act_min: 0.00, Act_max: 0.00)
+            )
+          )
+          (conv2): ConvBlock(
+            (conv): (Quant_Conv2d() weight_bit=4, full_precision_flag=False)
+            (bn): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (activ): Sequential(
+          (0): ReLU(inplace=True)
+          (1): QuantAct(activation_bit=4, full_precision_flag=False, running_stat=True, Act_min: 0.00, Act_max: 0.00)
+        )
+      )
+    )
+    (2): Sequential(
+      (0): ResUnit(
+        (body): ResBlock(
+          (conv1): ConvBlock(
+            (conv): (Quant_Conv2d() weight_bit=4, full_precision_flag=False)
+            (bn): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (activ): Sequential(
+              (0): ReLU(inplace=True)
+              (1): QuantAct(activation_bit=4, full_precision_flag=False, running_stat=True, Act_min: 0.00, Act_max: 0.00)
+            )
+          )
+          (conv2): ConvBlock(
+            (conv): (Quant_Conv2d() weight_bit=4, full_precision_flag=False)
+            (bn): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (identity_conv): ConvBlock(
+          (conv): (Quant_Conv2d() weight_bit=4, full_precision_flag=False)
+          (bn): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+        (activ): Sequential(
+          (0): ReLU(inplace=True)
+          (1): QuantAct(activation_bit=4, full_precision_flag=False, running_stat=True, Act_min: 0.00, Act_max: 0.00)
+        )
+      )
+      (1): ResUnit(
+        (body): ResBlock(
+          (conv1): ConvBlock(
+            (conv): (Quant_Conv2d() weight_bit=4, full_precision_flag=False)
+            (bn): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (activ): Sequential(
+              (0): ReLU(inplace=True)
+              (1): QuantAct(activation_bit=4, full_precision_flag=False, running_stat=True, Act_min: 0.00, Act_max: 0.00)
+            )
+          )
+          (conv2): ConvBlock(
+            (conv): (Quant_Conv2d() weight_bit=4, full_precision_flag=False)
+            (bn): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (activ): Sequential(
+          (0): ReLU(inplace=True)
+          (1): QuantAct(activation_bit=4, full_precision_flag=False, running_stat=True, Act_min: 0.00, Act_max: 0.00)
+        )
+      )
+      (2): ResUnit(
+        (body): ResBlock(
+          (conv1): ConvBlock(
+            (conv): (Quant_Conv2d() weight_bit=4, full_precision_flag=False)
+            (bn): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (activ): Sequential(
+              (0): ReLU(inplace=True)
+              (1): QuantAct(activation_bit=4, full_precision_flag=False, running_stat=True, Act_min: 0.00, Act_max: 0.00)
+            )
+          )
+          (conv2): ConvBlock(
+            (conv): (Quant_Conv2d() weight_bit=4, full_precision_flag=False)
+            (bn): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (activ): Sequential(
+          (0): ReLU(inplace=True)
+          (1): QuantAct(activation_bit=4, full_precision_flag=False, running_stat=True, Act_min: 0.00, Act_max: 0.00)
+        )
+      )
+    )
+    (3): Sequential(
+      (0): ResUnit(
+        (body): ResBlock(
+          (conv1): ConvBlock(
+            (conv): (Quant_Conv2d() weight_bit=4, full_precision_flag=False)
+            (bn): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (activ): Sequential(
+              (0): ReLU(inplace=True)
+              (1): QuantAct(activation_bit=4, full_precision_flag=False, running_stat=True, Act_min: 0.00, Act_max: 0.00)
+            )
+          )
+          (conv2): ConvBlock(
+            (conv): (Quant_Conv2d() weight_bit=4, full_precision_flag=False)
+            (bn): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (identity_conv): ConvBlock(
+          (conv): (Quant_Conv2d() weight_bit=4, full_precision_flag=False)
+          (bn): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+        (activ): Sequential(
+          (0): ReLU(inplace=True)
+          (1): QuantAct(activation_bit=4, full_precision_flag=False, running_stat=True, Act_min: 0.00, Act_max: 0.00)
+        )
+      )
+      (1): ResUnit(
+        (body): ResBlock(
+          (conv1): ConvBlock(
+            (conv): (Quant_Conv2d() weight_bit=4, full_precision_flag=False)
+            (bn): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (activ): Sequential(
+              (0): ReLU(inplace=True)
+              (1): QuantAct(activation_bit=4, full_precision_flag=False, running_stat=True, Act_min: 0.00, Act_max: 0.00)
+            )
+          )
+          (conv2): ConvBlock(
+            (conv): (Quant_Conv2d() weight_bit=4, full_precision_flag=False)
+            (bn): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (activ): Sequential(
+          (0): ReLU(inplace=True)
+          (1): QuantAct(activation_bit=4, full_precision_flag=False, running_stat=True, Act_min: 0.00, Act_max: 0.00)
+        )
+      )
+      (2): ResUnit(
+        (body): ResBlock(
+          (conv1): ConvBlock(
+            (conv): (Quant_Conv2d() weight_bit=4, full_precision_flag=False)
+            (bn): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (activ): Sequential(
+              (0): ReLU(inplace=True)
+              (1): QuantAct(activation_bit=4, full_precision_flag=False, running_stat=True, Act_min: 0.00, Act_max: 0.00)
+            )
+          )
+          (conv2): ConvBlock(
+            (conv): (Quant_Conv2d() weight_bit=4, full_precision_flag=False)
+            (bn): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (activ): Sequential(
+          (0): ReLU(inplace=True)
+          (1): QuantAct(activation_bit=4, full_precision_flag=False, running_stat=True, Act_min: 0.00, Act_max: 0.00)
+        )
+      )
+    )
+    (4): AvgPool2d(kernel_size=8, stride=1, padding=0)
+  )
+  (output): (Quant_Linear() weight_bit=4, full_precision_flag=False)
+)
+2023-04-16 16:53:24,254 INFO: #==>Best Result is: Top1 Error: 50.280000, Top5 Error: 22.350000
+2023-04-16 16:53:24,255 INFO: #==>Best Result is: Top1 Accuracy: 49.720000, Top5 Accuracy: 77.650000
+2023-04-16 16:53:49,578 INFO: #==>Best Result is: Top1 Error: 50.280000, Top5 Error: 22.350000
+2023-04-16 16:53:49,579 INFO: #==>Best Result is: Top1 Accuracy: 49.720000, Top5 Accuracy: 77.650000
+2023-04-16 16:54:09,335 INFO: #==>Best Result is: Top1 Error: 50.200000, Top5 Error: 22.050000
+2023-04-16 16:54:09,337 INFO: #==>Best Result is: Top1 Accuracy: 49.800000, Top5 Accuracy: 77.950000
+2023-04-16 16:54:29,233 INFO: #==>Best Result is: Top1 Error: 50.200000, Top5 Error: 22.050000
+2023-04-16 16:54:29,235 INFO: #==>Best Result is: Top1 Accuracy: 49.800000, Top5 Accuracy: 77.950000
+2023-04-16 16:54:52,110 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 16:54:52,111 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 16:55:12,512 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 16:55:12,513 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 16:55:38,593 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 16:55:38,594 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 16:56:07,310 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 16:56:07,311 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 16:56:30,656 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 16:56:30,657 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 16:56:53,855 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 16:56:53,856 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 16:57:17,399 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 16:57:17,401 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 16:57:35,713 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 16:57:35,713 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 16:58:05,417 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 16:58:05,418 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 16:58:31,973 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 16:58:31,975 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 16:58:55,069 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 16:58:55,070 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 16:59:18,259 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 16:59:18,260 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 16:59:41,519 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 16:59:41,520 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:00:00,926 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:00:00,927 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:00:30,544 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:00:30,545 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:00:55,579 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:00:55,580 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:01:18,762 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:01:18,763 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:01:49,294 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:01:49,295 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:02:10,125 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:02:10,126 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:02:43,622 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:02:43,623 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:03:11,941 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:03:11,942 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:03:38,220 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:03:38,222 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:04:05,090 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:04:05,092 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:04:35,638 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:04:35,639 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:05:07,934 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:05:07,935 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:05:33,822 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:05:33,825 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:06:00,149 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:06:00,150 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:06:26,382 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:06:26,383 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:06:59,999 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:07:00,000 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:07:28,804 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:07:28,805 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:07:55,025 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:07:55,025 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:08:21,302 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:08:21,303 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:08:51,951 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:08:51,952 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:09:24,895 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:09:24,896 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:09:51,119 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:09:51,120 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:10:17,684 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:10:17,686 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:10:42,905 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:10:42,905 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:11:11,186 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:11:11,187 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:11:43,418 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:11:43,419 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:12:09,978 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:12:09,980 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:12:36,547 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:12:36,548 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:13:04,360 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:13:04,361 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:13:38,165 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:13:38,165 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:14:06,448 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:14:06,450 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:14:33,047 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:14:33,048 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:14:59,756 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:14:59,757 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:15:16,863 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:15:16,863 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:15:45,347 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:15:45,347 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:16:11,024 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:16:11,025 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:16:33,463 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:16:33,464 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:16:55,554 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:16:55,555 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:17:17,792 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:17:17,794 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:17:36,540 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:17:36,541 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:18:04,803 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:18:04,803 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:18:29,091 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:18:29,092 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:18:51,170 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:18:51,170 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:19:13,497 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:19:13,497 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:19:35,582 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:19:35,582 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:20:03,857 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:20:03,858 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:20:30,393 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:20:30,395 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:20:52,856 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:20:52,857 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:21:14,695 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:21:14,696 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:21:36,929 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:21:36,930 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:21:54,539 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:21:54,539 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:22:22,956 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:22:22,956 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:22:48,169 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:22:48,171 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:23:10,400 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:23:10,401 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:23:32,719 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:23:32,720 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:23:54,792 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:23:54,794 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:24:13,307 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:24:13,307 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:24:41,663 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:24:41,663 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:25:06,291 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:25:06,292 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:25:28,490 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:25:28,492 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:25:50,676 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:25:50,677 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:26:12,873 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:26:12,873 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:26:41,375 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:26:41,376 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:27:07,915 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:27:07,916 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:27:30,120 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:27:30,121 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:27:52,398 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:27:52,398 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:28:14,735 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:28:14,737 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:28:41,268 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:28:41,268 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:29:09,798 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:29:09,800 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:29:32,331 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:29:32,332 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:29:54,594 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:29:54,595 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:30:16,849 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:30:16,851 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:30:41,659 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:30:41,660 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:31:10,035 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:31:10,035 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:31:33,455 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:31:33,456 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:31:55,854 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:31:55,855 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:32:18,230 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:32:18,232 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:32:39,312 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:32:39,313 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:33:01,014 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:33:01,015 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:33:29,255 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:33:29,255 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:33:51,967 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:33:51,968 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:34:14,290 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:34:14,292 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:34:36,443 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:34:36,444 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:34:56,384 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:34:56,384 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:35:20,334 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:35:20,335 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:35:48,812 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:35:48,813 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:36:11,115 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:36:11,116 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:36:33,381 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:36:33,384 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:36:55,671 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:36:55,672 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:37:20,254 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:37:20,255 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:37:48,773 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:37:48,774 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:38:12,276 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:38:12,278 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:38:34,702 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:38:34,703 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:38:57,136 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:38:57,138 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:39:18,191 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:39:18,192 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:39:39,920 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:39:39,921 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:40:08,154 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:40:08,155 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:40:30,990 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:40:30,991 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:40:53,204 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:40:53,205 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:41:15,463 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:41:15,465 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:41:38,786 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:41:38,787 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:42:07,233 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:42:07,234 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:42:32,107 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:42:32,108 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:42:54,495 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:42:54,496 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:43:16,946 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:43:16,947 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:43:39,170 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:43:39,171 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:44:07,489 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:44:07,490 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:44:33,697 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:44:33,698 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:44:55,984 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:44:55,986 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:45:18,202 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:45:18,205 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:45:40,435 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:45:40,435 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:45:58,066 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:45:58,067 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:46:26,414 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:46:26,415 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:46:51,645 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:46:51,647 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:47:13,776 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:47:13,777 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:47:36,167 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:47:36,168 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:47:58,412 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:47:58,413 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:48:17,145 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:48:17,146 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:48:45,333 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:48:45,334 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:49:09,444 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:49:09,445 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:49:31,675 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:49:31,676 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:49:54,080 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:49:54,081 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:50:15,877 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:50:15,877 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:50:36,615 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:50:36,615 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:51:05,101 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:51:05,102 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:51:27,865 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:51:27,867 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:51:50,202 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:51:50,202 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:52:12,351 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:52:12,351 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:52:35,518 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:52:35,519 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:53:03,938 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:53:03,939 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:53:28,862 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:53:28,864 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:53:51,204 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:53:51,204 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:54:13,607 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:54:13,608 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:54:35,918 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:54:35,919 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:55:03,993 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:55:03,994 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:55:30,963 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:55:30,963 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:55:53,427 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:55:53,428 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:56:15,695 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:56:15,696 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:56:38,178 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:56:38,179 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:57:04,761 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:57:04,762 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:57:33,597 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:57:33,598 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:57:56,113 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:57:56,114 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:58:18,374 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:58:18,376 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:58:40,831 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:58:40,831 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:59:05,559 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:59:05,559 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:59:34,048 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:59:34,049 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 17:59:57,699 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 17:59:57,700 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 18:00:20,005 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 18:00:20,007 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 18:00:42,406 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 18:00:42,406 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 18:01:02,988 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 18:01:02,988 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 18:01:25,636 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 18:01:25,636 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 18:01:54,019 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 18:01:54,020 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 18:02:16,445 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 18:02:16,445 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 18:02:38,913 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 18:02:38,914 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 18:03:01,388 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 18:03:01,389 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 18:03:20,547 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 18:03:20,547 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 18:03:46,117 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 18:03:46,117 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 18:04:13,917 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 18:04:13,918 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 18:04:36,180 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 18:04:36,180 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 18:04:58,545 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 18:04:58,546 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 18:05:20,812 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 18:05:20,813 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 18:05:46,257 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 18:05:46,257 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 18:06:14,526 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 18:06:14,527 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 18:06:37,528 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 18:06:37,529 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 18:06:59,864 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 18:06:59,866 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 18:07:22,204 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 18:07:22,206 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 18:07:42,448 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 18:07:42,448 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 18:08:05,541 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 18:08:05,542 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 18:08:34,019 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 18:08:34,020 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 18:08:56,026 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 18:08:56,026 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 18:09:18,258 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 18:09:18,260 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 18:09:40,665 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 18:09:40,666 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 18:10:04,845 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 18:10:04,846 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 18:10:33,251 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 18:10:33,251 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 18:10:57,379 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 18:10:57,380 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 18:11:19,643 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 18:11:19,643 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 18:11:42,108 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 18:11:42,110 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 18:12:04,268 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 18:12:04,268 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 18:12:32,589 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 18:12:32,590 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 18:12:58,917 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 18:12:58,918 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 18:13:21,224 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 18:13:21,225 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 18:13:43,413 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 18:13:43,414 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 18:14:05,928 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 18:14:05,930 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 18:14:33,287 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 18:14:33,288 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 18:15:01,314 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 18:15:01,315 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 18:15:23,751 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 18:15:23,753 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 18:15:46,112 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 18:15:46,112 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 18:16:08,742 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 18:16:08,743 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 18:16:34,413 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 18:16:34,413 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 18:17:03,048 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 18:17:03,048 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 18:17:25,803 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 18:17:25,805 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 18:17:48,226 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 18:17:48,227 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 18:18:10,695 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 18:18:10,696 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 18:18:34,832 INFO: #==>Best Result is: Top1 Error: 43.420000, Top5 Error: 16.340000
+2023-04-16 18:18:34,833 INFO: #==>Best Result is: Top1 Accuracy: 56.580000, Top5 Accuracy: 83.660000
+2023-04-16 18:18:51,111 ERROR: Training is terminating due to exception: 
+2023-04-16 18:18:51,112 INFO: Running Time is: 1:25:51.871268
+

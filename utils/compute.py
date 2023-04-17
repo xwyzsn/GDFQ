@@ -35,12 +35,14 @@ def compute_singlecrop(outputs, labels, loss, top5_flag=False, mean_flag=False):
             top1_error = []
             top5_error = []
             for i in range(len(outputs)):
-                top1_accuracy, top5_accuracy = accuracy(outputs[i], labels, topk=(1, 5))
+                top1_accuracy, top5_accuracy = accuracy(
+                    outputs[i], labels, topk=(1, 5))
                 top1_error.append(100 - top1_accuracy)
                 top5_error.append(100 - top5_accuracy)
                 top1_loss.append(loss[i].item())
         else:
-            top1_accuracy, top5_accuracy = accuracy(outputs, labels, topk=(1,5))
+            top1_accuracy, top5_accuracy = accuracy(
+                outputs, labels, topk=(1, 5))
             top1_error = 100 - top1_accuracy
             top5_error = 100 - top5_accuracy
             top1_loss = loss.item()
@@ -49,6 +51,7 @@ def compute_singlecrop(outputs, labels, loss, top5_flag=False, mean_flag=False):
             return top1_error, top1_loss, top5_error
         else:
             return top1_error, top1_loss
+
 
 def accuracy(output, target, topk=(1,)):
     """Computes the precision@k for the specified values of k"""
@@ -62,9 +65,11 @@ def accuracy(output, target, topk=(1,)):
 
         res = []
         for k in topk:
-            correct_k = correct[:k].view(-1).float().sum(0, keepdim=True)
+            correct_k = correct[:k].contiguous(
+            ).view(-1).float().sum(0, keepdim=True)
             res.append(correct_k.mul_(100.0 / batch_size).item())
         return res
+
 
 class AverageMeter(object):
     """Computes and stores the average and current value"""

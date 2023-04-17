@@ -67,12 +67,7 @@ class Option(NetOption):
 		
 		if os.path.exists(self.save_path):
 			print("{} file exist!".format(self.save_path))
-			action = input("Select Action: d (delete) / q (quit):").lower().strip()
-			act = action
-			if act == 'd':
-				shutil.rmtree(self.save_path)
-			else:
-				raise OSError("Directory {} exits!".format(self.save_path))
+			shutil.rmtree(self.save_path)
 		
 		if not os.path.exists(self.save_path):
 			os.makedirs(self.save_path)
